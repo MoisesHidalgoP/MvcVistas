@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*//name para recuperar nuestra lista en el controlador
+    @ViewBag para pasar el nombre hacia el controlador
+*@
+
+
+<select name="selUsuario">
+    @foreach (string user in ViewBag.Nombre)
+    {
+        <option>@user</option>
+    }
+
+    
+
+</select>
+<br />
+<br />
+
+<h4>Nuestro usuario seleccionado: @ViewBag.Nombre</h4>
+<button type="submit">Seleccionar usuario</button>
+
+
+
+
+
